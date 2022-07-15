@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+// import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
+import ProductCategories from './components/ProductCategories/ProductCategories';
+import ProductPage from './components/ProductPage/ProductPage';
 function App() {
+  const [productId, setProductId] = useState(0);
+  const [productCategoryName, setProductCategoryName]=useState("")
+  console.log("shubham",productCategoryName);
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Navbar productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName}/> }/>
+        {/* <Route path="/" element={<ProductCategories/>}/> */}
+        <Route path="/products/:id" element={<ProductPage productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName} />}  />
+
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

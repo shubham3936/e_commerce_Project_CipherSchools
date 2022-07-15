@@ -1,0 +1,25 @@
+.product_box_container{
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    /* border: 2px solid green; */
+    box-shadow: -5px 5px 5px 0  crimson;
+    cursor: pointer;
+
+}
+
+.product_box_container:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+.product_box_image_container>img{
+    width: 100px;
+    height: 100px;
+}
+
+.product_box_details{
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+
+}

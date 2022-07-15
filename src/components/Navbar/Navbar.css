@@ -1,0 +1,48 @@
+.navbar_container{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color:rgb(239, 61, 96);
+    color: wheat;
+    /* border: 2px solid black; */
+}
+.searchbox >input{
+    width: 300px;
+    height: 25px;
+    border-radius: 3px;
+    outline: none;
+
+}
+.logo>img{
+    /* border: 1px solid green; */
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+
+}
+.signin>button{
+    width: 60px;
+    height: 30px;
+    color:crimson;
+    /* font-size: 15px; */
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+.myorders{
+    /* border: 1px solid green; */
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.contactus{
+    /* border: 1px solid green; */
+    font-weight: bold;
+    font-size: 15px;
+
+
+
+}
