@@ -1,10 +1,11 @@
 .product_box_container{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     margin: 15px;
     /* border: 2px solid green; */
     box-shadow: -5px 5px 5px 0  crimson;
     cursor: pointer;
+    /* justify-content: space-between; */
 
 }
 
@@ -13,8 +14,8 @@
     transition: transform 0.5s;
 }
 .product_box_image_container>img{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .product_box_details{

@@ -1,18 +1,41 @@
-.singleproductpage_container {
+.Whole_product_page{
     display: flex;
 }
-.singleproductpage_left_container {
-    flex: 40%;
+.all_product{
+    width: 600px;
+    height: 600px;
+    /* display; */
+}
+.all_product_left {
+    /* flex: 40%; */
     background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.singleproductpage_right_container {
-    flex: 60%;
+.all_product_right{
+    /* flex: 60%; */
     background-color: beige;
     padding: 20px 5%;
 }
+
+
+.all_product_left>img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .singleproductpage_left_container > img {
     width: 400px;
 }

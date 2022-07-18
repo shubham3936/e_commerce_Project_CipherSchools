@@ -6,6 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import ProductCategories from './components/ProductCategories/ProductCategories';
 import ProductPage from './components/ProductPage/ProductPage';
+import SignIn from "./container/SignIn/SignIn";
+
 function App() {
   const [productId, setProductId] = useState(0);
   const [productCategoryName, setProductCategoryName]=useState("")
@@ -17,7 +19,7 @@ function App() {
         <Route path="/" element={<Navbar productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName}/> }/>
         {/* <Route path="/" element={<ProductCategories/>}/> */}
         <Route path="/products/:id" element={<ProductPage productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName} />}  />
-
+        <Route path="/sign-in" element={<SignIn />}/>
       </Routes>
     </div>
     </BrowserRouter>

@@ -2,10 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "./Navbar.css";
 import logo from "../../images/ecom.png";
+import banner from '../../images/banner1.jpg';
+import { useNavigate } from 'react-router-dom';
 import ProductCategories from '../ProductCategories/ProductCategories';
+import Button from "../../global/Button/Button";
+//import { Navigate, useNavigate } from 'react-router-dom';
 
 
-function Navbar({productCategoryName, setProductCategoryName}) {
+function Navbar({productCategoryName, setProductCategoryName,showSigninButton}) {
+
+  const navigate = useNavigate();
+  function gotoSignPage()
+  {
+    navigate("/sign-in");
+  }
   return (
     <>
     <div className="navbar_container">
@@ -16,7 +26,9 @@ function Navbar({productCategoryName, setProductCategoryName}) {
           <input type="text" placeholder="Search"/>
         </div>
         <div className='signin'>
-          <button>LogIn</button>
+          {showSigninButton===false ?(" ")
+           : (<Button text="Sign In" onClick={gotoSignPage}/>)
+           }
         </div>
         <div className='myorders'>
           <p>MyOrders</p>
@@ -30,7 +42,11 @@ function Navbar({productCategoryName, setProductCategoryName}) {
         
         
     </div>
-    <ProductCategories productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName}/>
+    
+    <div className='banner'>
+        <img src={banner} alt="" />
+    </div>
+      <ProductCategories productCategoryName={productCategoryName} setProductCategoryName={setProductCategoryName}/>
     </>
   )
 }
